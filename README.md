@@ -1,2 +1,3 @@
 # CourseRepository
-Repository for *SkillFactory* course
+Данный репозиторий создан в рамках курса *SkillFactory* 
+
