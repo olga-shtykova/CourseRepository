@@ -1,2 +1,2 @@
 # CourseRepository
-Repository for SkillFactory course
+Repository for *SkillFactory* course
