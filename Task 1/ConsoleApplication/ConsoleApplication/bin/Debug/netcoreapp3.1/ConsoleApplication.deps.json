@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ConsoleApplication/1.0.0": {
+        "dependencies": {
+          "GreetingStandardLibrary": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleApplication.dll": {}
+        }
+      },
+      "GreetingStandardLibrary/1.0.0": {
+        "runtime": {
+          "GreetingStandardLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleApplication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GreetingStandardLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
