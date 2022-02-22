@@ -4,12 +4,14 @@ namespace Module7
 {
     class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var array = new BookClass[] {
-            new BookClass { Name = "Мастер и Маргарита", Author = "М.А. Булгаков" },
-            new BookClass { Name = "Отцы и дети", Author = "И.С. Тургенев" },
-        };
+            var array = new BookClass[]
+            {
+                new BookClass { Name = "Мастер и Маргарита", Author = "М.А. Булгаков" },
+                new BookClass { Name = "Отцы и дети", Author = "И.С. Тургенев" },
+            };
+
             BookCollection collection = new BookCollection(array);
 
             BookClass book = collection[1];
