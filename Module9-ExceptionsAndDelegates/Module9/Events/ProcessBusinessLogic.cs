@@ -17,7 +17,7 @@ namespace Events
             OnProcessCompleted();
         }
 
-        protected virtual void OnProcessCompleted() //protected virtual method
+        protected virtual void OnProcessCompleted()
         {
             ProcessCompleted?.Invoke();
         }
