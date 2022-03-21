@@ -1,6 +1,5 @@
 ﻿using SkillFactoryBot.Commands;
 using SkillFactoryBot.Commands.Interfaces;
-using SkillFactoryBot.Models;
 using System.Collections.Generic;
 
 namespace SkillFactoryBot
@@ -58,7 +57,7 @@ namespace SkillFactoryBot
 
         public void StartAddingItemsToDictionary(string message, Conversation chat)
         {
-            var command = Command.Find(x => x.CheckMessage(message)) as AddWordCommand;            
+            var command = Command.Find(x => x.CheckMessage(message)) as AddWordCommand;
 
             addingController.AddFirstItem(chat);
             command.StartProcessAsync(chat);
@@ -70,7 +69,7 @@ namespace SkillFactoryBot
             var thisChat = chat.GetId();
 
             command.DoForStageAsync(addingController.GetStage(chat), chat, message);
-            
+
             addingController.NextStage(chat);
         }
 

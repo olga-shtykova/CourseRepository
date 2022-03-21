@@ -9,7 +9,7 @@ namespace SkillFactoryBot.Commands
             CommandText = "/deleteword";
         }
 
-        public bool DoAction(Conversation chat)
+        public void DoAction(Conversation chat)
         {
             var message = chat.GetLastMessage();
 
@@ -18,10 +18,9 @@ namespace SkillFactoryBot.Commands
             if (chat.dictionary.ContainsKey(text))
             {
                 chat.dictionary.Remove(text);
-                return true;
             }
 
-            return false;
+            return;
         }
 
         public string ReturnText()
