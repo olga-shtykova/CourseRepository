@@ -79,7 +79,6 @@
     <Compile Include="Commands\Interfaces\IChatCommand.cs" />
     <Compile Include="Commands\Interfaces\IChatTextCommand.cs" />
     <Compile Include="Commands\Interfaces\IChatTextCommandWithAction.cs" />
-    <Compile Include="Commands\SayHiCommand.cs" />
     <Compile Include="Conversation.cs" />
     <Compile Include="Messenger.cs" />
     <Compile Include="Models\DictionaryItem.cs" />
