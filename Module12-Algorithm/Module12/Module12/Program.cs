@@ -1,32 +1,38 @@
-﻿using System;
-
-namespace Module12
+﻿namespace Module12
 {
     static class Program
     {
         static void Main(string[] args)
         {
-			var users = new List<User>();
-			users.Add(new User { Name = "Таня", IsPremium = true });
-			users.Add(new User { Name = "Виктор", IsPremium = false });
-			users.Add(new User { Name = "Катя", IsPremium = false });
-			users.Add(new User { Name = "Оля", IsPremium = true });
+            var users = new List<User>();
+            users.Add(new User { Name = "Татьяна", IsPremium = true });
+            users.Add(new User { Name = "Виктор", IsPremium = true });
+            users.Add(new User { Name = "Екатерина", IsPremium = false });
+            users.Add(new User { Name = "Ольга", IsPremium = true });
+
+            foreach (var user in users)
+            {
+                Console.WriteLine($"Здравствуйте, {user.Name}!");
+                if (!user.IsPremium)
+                {
+                    ShowAds();
+                }
+            }
+
+            Console.ReadLine();
         }
 
-		static void ShowAds()
-		{
-			Console.WriteLine("Посетите наш новый сайт с бесплатными играми free.games.for.a.fool.com");
-			// Остановка на 1 с
-			Thread.Sleep(1000);
+        private static void ShowAds()
+        {
+            Console.WriteLine("Посетите наш новый сайт с бесплатными играми free.games.for.a.fool.com");
+            Thread.Sleep(1000);
 
-			Console.WriteLine("Купите подписку на МыКомбо и слушайте музыку везде и всегда.");
-			// Остановка на 2 с
-			Thread.Sleep(2000);
+            Console.WriteLine("Купите подписку на МыКомбо и слушайте музыку везде и всегда.");            
+            Thread.Sleep(2000);
 
-			Console.WriteLine("Оформите премиум-подписку на наш сервис, чтобы не видеть рекламу.");
-			// Остановка на 3 с
-			Thread.Sleep(3000);
-		}
-	}
+            Console.WriteLine("Оформите премиум-подписку на наш сервис, чтобы не видеть рекламу.");            
+            Thread.Sleep(3000);
+        }
+    }
 
 }
