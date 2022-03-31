@@ -4,11 +4,13 @@
     {
         static void Main(string[] args)
         {
-            var users = new List<User>();
-            users.Add(new User { Name = "Татьяна", IsPremium = true });
-            users.Add(new User { Name = "Виктор", IsPremium = true });
-            users.Add(new User { Name = "Екатерина", IsPremium = false });
-            users.Add(new User { Name = "Ольга", IsPremium = true });
+            var users = new List<User>() 
+            {
+                new User { Name = "Татьяна", IsPremium = true },
+                new User { Name = "Виктор", IsPremium = true },
+                new User { Name = "Екатерина", IsPremium = false },
+                new User { Name = "Ольга", IsPremium = true },
+            };
 
             foreach (var user in users)
             {
