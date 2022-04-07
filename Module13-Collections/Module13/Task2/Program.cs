@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Task3
+namespace Task2
 {
     class Program
     {
