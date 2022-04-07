@@ -15,6 +15,7 @@ namespace ArrayExample
 
             // разбиваем нашу строку текста, используя ранее перечисленные символы-разделители
             var words = text.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+
             // выводим количество
             Console.WriteLine(words.Length);
         }
