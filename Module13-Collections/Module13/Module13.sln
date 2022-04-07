@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListExample", "Module13\ListExample.csproj", "{5FD72909-9EA4-4FE6-94B3-09D12F7580C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashSetExample", "HashSetExample\HashSetExample.csproj", "{A5BD16FD-F947-4226-87A2-5D1D6F2E4338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSetExample", "HashSetExample\HashSetExample.csproj", "{A5BD16FD-F947-4226-87A2-5D1D6F2E4338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayExample", "ArrayExample\ArrayExample.csproj", "{B768CE0E-F7F0-4538-92CE-09945D985967}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayExample", "ArrayExample\ArrayExample.csproj", "{B768CE0E-F7F0-4538-92CE-09945D985967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayListExample", "ArrayListExample\ArrayListExample.csproj", "{9221A55E-A160-4857-9869-FA791E7C6C3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayListExample", "ArrayListExample\ArrayListExample.csproj", "{9221A55E-A160-4857-9869-FA791E7C6C3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DictionaryExample", "DictionaryExample\DictionaryExample.csproj", "{5E904554-48C6-43F8-9A66-2C21D1E19483}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryExample", "DictionaryExample\DictionaryExample.csproj", "{5E904554-48C6-43F8-9A66-2C21D1E19483}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortedDictionaryExample", "SortedDictionaryExample\SortedDictionaryExample.csproj", "{E76348C6-9D5D-4B47-ACE9-92B28644951E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedDictionaryExample", "SortedDictionaryExample\SortedDictionaryExample.csproj", "{E76348C6-9D5D-4B47-ACE9-92B28644951E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackExample", "StackExample\StackExample.csproj", "{1EE0921D-316C-475B-B7A1-B7B55A250AFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExample", "StackExample\StackExample.csproj", "{1EE0921D-316C-475B-B7A1-B7B55A250AFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueExample", "QueueExample\QueueExample.csproj", "{6C603E24-0F24-4BA6-9AE4-CBC74F5950D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueExample", "QueueExample\QueueExample.csproj", "{6C603E24-0F24-4BA6-9AE4-CBC74F5950D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedListExample", "LinkedListExample\LinkedListExample.csproj", "{275AB1CD-ABCE-4522-8D2E-5AE8F8F5C170}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListExample", "LinkedListExample\LinkedListExample.csproj", "{275AB1CD-ABCE-4522-8D2E-5AE8F8F5C170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskLinkedList", "TaskLinkedList\TaskLinkedList.csproj", "{87BF50B7-2A83-483F-BB47-442DA0DCA9F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList", "Task\TaskList.csproj", "{E651BF7A-7742-4963-B099-3436D62BCD06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListExample", "ListExample\ListExample.csproj", "{5AD5C148-7FD3-47B3-AC9F-E5C72EB3BD92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskLinkedList", "TaskLinkedList\TaskLinkedList.csproj", "{87BF50B7-2A83-483F-BB47-442DA0DCA9F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskList", "TaskList\TaskList.csproj", "{8013BA70-35DD-4F70-A89A-7498AE2351C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5FD72909-9EA4-4FE6-94B3-09D12F7580C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FD72909-9EA4-4FE6-94B3-09D12F7580C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FD72909-9EA4-4FE6-94B3-09D12F7580C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FD72909-9EA4-4FE6-94B3-09D12F7580C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5BD16FD-F947-4226-87A2-5D1D6F2E4338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5BD16FD-F947-4226-87A2-5D1D6F2E4338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5BD16FD-F947-4226-87A2-5D1D6F2E4338}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,14 +63,18 @@ Global
 		{275AB1CD-ABCE-4522-8D2E-5AE8F8F5C170}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{275AB1CD-ABCE-4522-8D2E-5AE8F8F5C170}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{275AB1CD-ABCE-4522-8D2E-5AE8F8F5C170}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E651BF7A-7742-4963-B099-3436D62BCD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E651BF7A-7742-4963-B099-3436D62BCD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E651BF7A-7742-4963-B099-3436D62BCD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E651BF7A-7742-4963-B099-3436D62BCD06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87BF50B7-2A83-483F-BB47-442DA0DCA9F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87BF50B7-2A83-483F-BB47-442DA0DCA9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87BF50B7-2A83-483F-BB47-442DA0DCA9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87BF50B7-2A83-483F-BB47-442DA0DCA9F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD5C148-7FD3-47B3-AC9F-E5C72EB3BD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD5C148-7FD3-47B3-AC9F-E5C72EB3BD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD5C148-7FD3-47B3-AC9F-E5C72EB3BD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD5C148-7FD3-47B3-AC9F-E5C72EB3BD92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8013BA70-35DD-4F70-A89A-7498AE2351C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8013BA70-35DD-4F70-A89A-7498AE2351C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8013BA70-35DD-4F70-A89A-7498AE2351C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8013BA70-35DD-4F70-A89A-7498AE2351C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
