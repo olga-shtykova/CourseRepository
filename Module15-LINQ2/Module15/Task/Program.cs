@@ -33,9 +33,7 @@ namespace Task
                 }
             }
 
-            var result = allStudents.ToArray();
-
-            return result;
+            return allStudents.ToArray();
         }
 
         public class Classroom
