@@ -75,8 +75,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculatorXunitTests.cs" />
-    <Compile Include="CalculatorNUnitTests.cs" />
+    <Compile Include="CalculatorTests\CalculatorXunitTests.cs" />
+    <Compile Include="CalculatorTests\CalculatorNUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TicketPriceTests.cs" />
     <Compile Include="TicketServiceTests.cs" />

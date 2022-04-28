@@ -1,56 +1,53 @@
-﻿using NUnit.Framework;
-using Practices;
+﻿using Practices;
 using System;
+using Xunit;
 
-namespace UserTicketService.Tests
+namespace UserTicketService.Tests.CalculatorTests
 {
-    [TestFixture]
-    public class CalculatorNUnitTests
+    public class CalculatorXunitTests
     {
-        [Test]
+        [Fact]
         public void Addition_MustReturnCorrectValue()
         {
             // Arrange
-            var calculatorTest = new Calculator();
+            var calculator = new Calculator();
 
-            // Assert
-            Assert.That(calculatorTest.Addition(10, 220), Is.EqualTo(230));
+            //Assert
+            Assert.Equal(10, calculator.Addition(5, 5));
         }
 
-        [Test]
+        [Fact]
         public void Subtraction_MustReturnCorrectValue()
         {
             // Arrange
             var calculator = new Calculator();
 
             // Assert
-            Assert.That(calculator.Subtraction(300, 10) == 290);
+            Assert.True(calculator.Subtraction(300, 10) == 290);
         }
 
-        [Test]
+        [Fact]
         public void Multiplication_MustReturnNotNullValue()
         {
             // Arrange
             var calculator = new Calculator();
 
-            // Act
-            var result = calculator.Multiplication(2, 4);
+            // Act Assert
+            Assert.Equal(8, calculator.Multiplication(2, 4));
+        }
+       
 
-            // Assert
-            Assert.AreEqual(8, result);
-        }              
-
-        [Test]
+        [Fact]
         public void Division_MustReturnCorrectValue()
         {
             // Arrange
             var calculator = new Calculator();
 
             // Assert
-            Assert.That(calculator.Division(9, 3) == 3);
+            Assert.True(calculator.Division(200, 10) == 20);
         }
 
-        [Test]
+        [Fact]
         public void Division_MustThrowException()
         {
             // Arrange
@@ -59,7 +56,5 @@ namespace UserTicketService.Tests
             // Assert
             Assert.Throws<DivideByZeroException>(() => calculator.Division(30, 0));
         }
-
-        
     }
 }
