@@ -18,8 +18,10 @@ namespace UserTicketService.Tests
 
             var ticketPriceTest = new TicketPrice(mockTicketService.Object);
 
-            // Act Assert
+            // Assert
             Assert.That(ticketPriceTest.MakeTicketPrice(3) == 7800);
+            Assert.That(ticketPriceTest.MakeTicketPrice(2) == 500);
+            Assert.That(ticketPriceTest.MakeTicketPrice(1) == 100);
         }
     }
 }

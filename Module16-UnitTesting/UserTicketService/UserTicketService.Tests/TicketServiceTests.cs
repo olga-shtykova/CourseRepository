@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using UserTicketService.Exceptions;
 
 namespace UserTicketService.Tests
@@ -13,7 +14,7 @@ namespace UserTicketService.Tests
             var ticketServiceTest = new TicketService();
 
             // Assert
-            Assert.IsNotNull(ticketServiceTest.GetTicketPrice(1));
+            NUnit.Framework.Assert.IsNotNull(ticketServiceTest.GetTicketPrice(1));
         }
 
         [Test]
@@ -23,8 +24,33 @@ namespace UserTicketService.Tests
             var ticketServiceTest = new TicketService();
 
             // Assert
-            Assert.Throws<TicketNotFoundException>(() => ticketServiceTest.GetTicketPrice(100));
+            NUnit.Framework.Assert.Throws<TicketNotFoundException>(() => ticketServiceTest.GetTicketPrice(100));
         }
 
-    }
+        [Test]
+        public void SaveTicket()
+        {
+            // Arrange
+            var ticketServiceTest = new TicketService();
+            var newTicket = new Ticket(4, "Test ticket", 1000);
+
+            // Act
+            ticketServiceTest.SaveTicket(newTicket);
+            var allTicketsAfterAddingNewTicket = ticketServiceTest.GetAllTickets();
+
+            // Assert
+            NUnit.Framework.CollectionAssert.Contains(allTicketsAfterAddingNewTicket, newTicket);
+
+            PrivateObject obj = new PrivateObject(ticketServiceTest);
+
+            obj.Invoke("DeleteTicket", newTicket);
+
+            // Act
+            var allTicketsAfterDeletingNewTicket = ticketServiceTest.GetAllTickets();
+
+            // Assert
+            NUnit.Framework.CollectionAssert.DoesNotContain(allTicketsAfterDeletingNewTicket, newTicket);
+        }
+
+    }   
 }
