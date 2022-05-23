@@ -14,6 +14,7 @@ namespace SocialNetwork.Tests
         [TestCase("", "Correro", "tanya@test.com", "12345678")]
         [TestCase("Tanya", "", "tanya@test.com", "12345678")]
         [TestCase("Tanya", "Correro", "", "12345678")]
+        [TestCase("Tanya", "Correro", "tanya@test.com", "12345")]
         [TestCase("Tanya", "Correro", "tanya_test.com", "12345678")]
         [TestCase("Tanya", "Correro", "tanya@test.com", "12345678")]
         [Test]
@@ -37,7 +38,7 @@ namespace SocialNetwork.Tests
                 Password = "10010034",
             };
 
-            var userRepository = new Mock<IUserRepository>().Setup(rep => rep.FindByEmail(email));
+            var userRepository = new Mock<IUserRepository>().Setup(rep => rep.FindByEmail(email)).Returns(userEntity);
             var userService = new UserService();
 
             // Assert
