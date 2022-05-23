@@ -19,16 +19,16 @@ namespace SocialNetwork.PLL.Views
 
         public void Show(User user)
         {
-            var messageSendingData = new MessageSendingData();
-
-            Console.WriteLine();
             Console.Write("Insert recipient's email: ");
-            messageSendingData.RecipientEmail = Console.ReadLine();
 
-            Console.WriteLine("Write a message (must be no longer than 500 symbols): ");
+            var messageSendingData = new MessageSendingData
+            {
+                RecipientEmail = Console.ReadLine(),
+                SenderId = user.Id,
+            };
+
+            Console.WriteLine("Write a message (no longer than 500 symbols).");
             messageSendingData.Content = Console.ReadLine();
-
-            messageSendingData.SenderId = user.Id;
 
             try
             {
@@ -48,7 +48,7 @@ namespace SocialNetwork.PLL.Views
             }
             catch (Exception ex)
             {
-                AlertMessage.Show($"There was an error during the registration: {ex.Message}");
+                AlertMessage.Show($"There was an error when sending a message: {ex.Message}");
             }
         }
     }

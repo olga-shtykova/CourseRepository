@@ -4,20 +4,23 @@ using SocialNetwork.DAL.Entities;
 using SocialNetwork.DAL.Repositories;
 using SocialNetwork.DAL.Repositories.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace SocialNetwork.BLL.Services
 {
     public class UserService
     {
         MessageService _messageService;
-
         IUserRepository _userRepository;
+        IFriendRepository _friendRepository;
 
         public UserService()
         {
-            _userRepository = new UserRepository();
             _messageService = new MessageService();
+            _userRepository = new UserRepository();
+            _friendRepository = new FriendRepository();
         }
 
         public void Register(UserRegistrationData userRegistrationData)
@@ -51,7 +54,7 @@ namespace SocialNetwork.BLL.Services
                 Email = userRegistrationData.Email,
             };
 
-            if (this._userRepository.Create(userEntity) == 0)
+            if (_userRepository.Create(userEntity) == 0)
                 throw new Exception();
         }
 
@@ -103,11 +106,44 @@ namespace SocialNetwork.BLL.Services
                 throw new Exception();
         }
 
+        public IEnumerable<User> GetFriendsByUserId(int userId)
+        {
+            return _friendRepository.FindAllByUserId(userId)
+               .Select(friend => FindById(friend.Friend_id));
+        }
+
+        public void AddFriend(AddFriendData friendData)
+        {
+            var friendUserEntity = FindByEmail(friendData.FriendEmail);
+
+            if (friendUserEntity is null) throw new UserNotFoundException();
+
+            var friendEntity = new FriendEntity()
+            {
+                User_id = friendData.UserId,
+                Friend_id = friendUserEntity.Id
+            };
+
+            if (_friendRepository.Create(friendEntity) == 0)
+                throw new Exception();
+        }
+
+        public bool CheckIfFriendDoesNotExist(AddFriendData friendData, int userId)
+        {
+            var friendUserEntity = FindByEmail(friendData.FriendEmail);
+
+            var friend = GetFriendsByUserId(userId).Where(user => user.Id == friendUserEntity.Id);
+
+            return friend.Count() == 0;
+        }
+
         private User ConstructUserModel(UserEntity userEntity)
         {
             var incomingMessages = _messageService.GetIncomingMessagesByUserId(userEntity.Id);
 
             var outgoingMessages = _messageService.GetOutcomingMessagesByUserId(userEntity.Id);
+
+            var friends = GetFriendsByUserId(userEntity.Id);
 
             return new User(userEntity.Id,
                           userEntity.Firstname,
@@ -118,7 +154,8 @@ namespace SocialNetwork.BLL.Services
                           userEntity.Favorite_movie,
                           userEntity.Favorite_book,
                           incomingMessages,
-                          outgoingMessages);
+                          outgoingMessages,
+                          friends);
         }
     }
 }

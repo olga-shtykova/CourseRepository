@@ -19,6 +19,7 @@ namespace SocialNetwork.PLL.Views
             {
                 Console.WriteLine($"Incoming messages: {user.IncomingMessages.Count()}");
                 Console.WriteLine($"Outgoing messages: {user.OutgoingMessages.Count()}");
+                Console.WriteLine($"Friends: {user.Friends.Count()}");
                 Console.WriteLine("To see your profile (press 1)");
                 Console.WriteLine("To edit your profile (press 2)");
                 Console.WriteLine("To add a user to friends (press 3)");
@@ -42,6 +43,12 @@ namespace SocialNetwork.PLL.Views
                     case "2":
                         {
                             Program._userDataUpdateView.Show(user);
+                            break;
+                        }
+
+                    case "3":
+                        {
+                            Program._addFriendView.Show(user);
                             break;
                         }
 

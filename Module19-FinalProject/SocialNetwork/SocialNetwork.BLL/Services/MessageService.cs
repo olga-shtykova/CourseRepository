@@ -16,8 +16,8 @@ namespace SocialNetwork.BLL.Services
 
         public MessageService()
         {
-            _userRepository = new UserRepository();
             _messageRepository = new MessageRepository();
+            _userRepository = new UserRepository();            
         }
 
         public IEnumerable<Message> GetIncomingMessagesByUserId(int recipientId)
