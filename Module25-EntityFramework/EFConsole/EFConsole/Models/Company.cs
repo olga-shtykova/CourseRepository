@@ -8,6 +8,8 @@ namespace EFConsole.Models
 
         public string Name { get; set; }
 
+        public string? City { get; set; } 
+
         // Навигационное свойство
         public List<User> Users { get; set; } = new List<User>();
     }
