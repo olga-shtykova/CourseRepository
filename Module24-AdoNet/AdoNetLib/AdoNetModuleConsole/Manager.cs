@@ -82,10 +82,10 @@ namespace AdoNetModuleConsole
             return dbExecutor.DeleteByColumn(userTable.Name, userTable.ImportantField, value);
         }
 
-        public void AddUser(string name, string login)
+        public void AddUser(string name, string login, byte[] cardNumber)
         {
             dbExecutor = new DbExecutor(connector);
-            dbExecutor.ExecProcedureAdding(name, login);
+            dbExecutor.ExecProcedureAdding(name, login, cardNumber);
         }
 
         public int UpdateUserByLogin(string columnValue, string newvalue)

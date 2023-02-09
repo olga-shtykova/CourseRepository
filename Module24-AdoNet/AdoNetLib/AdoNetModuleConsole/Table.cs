@@ -15,5 +15,7 @@ namespace AdoNetModuleConsole
 
         public string ImportantField { get; set; }
 
+        public byte[] CardNumber { get; set; }
+
     }
 }

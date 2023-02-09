@@ -54,7 +54,7 @@ namespace AdoNetLib
             return command.ExecuteNonQuery();
         }
 
-        public int ExecProcedureAdding(string name, string login)
+        public int ExecProcedureAdding(string name, string login, byte[] cardNumber)
         {
             var command = new SqlCommand
             {
@@ -65,6 +65,7 @@ namespace AdoNetLib
 
             command.Parameters.Add(new SqlParameter("@Name", name));
             command.Parameters.Add(new SqlParameter("@Login", login));
+            command.Parameters.Add(new SqlParameter("@CardNumber", cardNumber));
 
             return command.ExecuteNonQuery();
         }

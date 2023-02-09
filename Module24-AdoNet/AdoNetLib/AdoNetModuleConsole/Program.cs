@@ -153,9 +153,11 @@ namespace AdoNetModuleConsole
             var name = Console.ReadLine();
 
             Console.WriteLine("Введите логин для добавления:");
-            var login = Console.ReadLine();           
+            var login = Console.ReadLine();
 
-            manager.AddUser(name, login);
+            var cardNumber = new byte[] { 12, 200, 40, 56 };
+
+            manager.AddUser(name, login, cardNumber);            
 
             manager.ShowData();
         }
